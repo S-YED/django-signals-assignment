@@ -35,13 +35,13 @@ python rectangledemo/rectangle.py
 
 ## **FILES** 
 
-* Q1 - Synchronous execution proof → signals_demo/q1_sync_signal.py
+* Q1 - Synchronous execution proof → signalsdemo/sync_signal.py
 
-* Q2 - Same thread proof → signals_demo/q2_same_thread.py
+* Q2 - Same thread proof → signalsdemo/same_thread.py
 
-* Q3 - Same DB transaction proof → signals_demo/q3_same_transaction.py
+* Q3 - Same DB transaction proof → signalsdemo/same_transaction.py
 
-* Rectangle- Iterable class → rectangle_demo/rectangle.py
+* Rectangle- Iterable class → rectangledemo/rectangle.py
 
 **Requirements**
 ```txt
