@@ -37,9 +37,23 @@ python rectangledemo/rectangle.py
 
 * Q1 - Synchronous execution proof → signalsdemo/sync_signal.py
 
+Answer - By default, Django signals are synchronous. When a signal is sent (for example post_save), Django immediately calls each connected receiver in order, and the original code does not continue until all receivers finish. If a receiver is slow, the request or command that triggered it will also be slow.
+
 * Q2 - Same thread proof → signalsdemo/same_thread.py
 
+Answer - Yes, by default a signal receiver runs in the same thread that sent the signal. This matters because any heavy work in the receiver will block that same thread.
+
 * Q3 - Same DB transaction proof → signalsdemo/same_transaction.py
+
+Answer -
+
+Signal receivers execute in the same database connection and transactional context as the caller.
+
+If the caller is inside transaction.atomic(), then the receiver’s database writes are part of that same transaction. A rollback will undo both.
+
+If you are not inside an atomic block (default autocommit), each query commits on its own. There is no larger transaction to “share,” but the receiver still runs inline on the same connection.
+
+If you need the receiver to act only after the outer transaction successfully commits, use transaction.on_commit(...).
 
 * Rectangle- Iterable class → rectangledemo/rectangle.py
 
