@@ -23,14 +23,14 @@ python manage.py migrate
 ```
 4. **Run each question in Django shell**
 ```bash
-python manage.py shell < signals_demo/sync_signal.py
-python manage.py shell < signals_demo/same_thread.py
-python manage.py shell < signals_demo/same_transaction.py
+python manage.py shell < signalsdemo/sync_signal.py
+python manage.py shell < signalsdemo/same_thread.py
+python manage.py shell < signalsdemo/same_transaction.py
 
 ```
 5. **Run Rectangle class**
 ```bash
-python rectangle_demo/rectangle.py
+python rectangledemo/rectangle.py
 ```
 
 ## **FILES** 
