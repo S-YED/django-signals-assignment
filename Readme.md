@@ -1,4 +1,4 @@
-# Django Signals & Python Rectangle Class — Assignment
+# Django Signals & Python Rectangle Class - Assignment
 
 This repository contains runnable code for the Django Signals and Python Custom Class questions.
 
